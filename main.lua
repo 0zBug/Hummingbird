@@ -38,7 +38,7 @@ return {
 
         return Connection
     end,
-    Wait = function(Connections, Time)
+    Wait = function(self, Time)
         local Time = (type(t) ~= "number" or Time < 0) and 0 or Time
         table.insert(Yeilds, {os.clock(), Time, coroutine.running()})
         return coroutine.yield()
